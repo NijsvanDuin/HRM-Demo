@@ -42,4 +42,8 @@ class Applicant extends BaseController
         $this->applicantModel->updateApplicant($_POST);
         $this->redirect('/applicant');
     }
+    public function  delete($id){
+        $this->applicantModel->deleteApplicant($id);
+        $this->redirect('/applicant');
+    }
 }

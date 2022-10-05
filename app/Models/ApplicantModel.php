@@ -69,4 +69,12 @@ class ApplicantModel
 
         header('LOCATION: /applicant');
     }
+    public function deleteApplicant($id)
+    {
+        $this->db->query('DELETE FROM `applicant` WHERE `id` = :id');
+        $this->db->bind(':id', $id);
+        $this->db->execute();
+
+        header('LOCATION: /applicant');
+    }
 }
